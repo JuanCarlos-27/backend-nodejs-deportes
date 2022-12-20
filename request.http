@@ -1,0 +1,49 @@
+###
+GET http://127.0.0.1:9000/api/libros HTTP/1.1
+
+###
+
+POST http://127.0.0.1:9000/api/libros HTTP/1.1
+Content-Type: application/json
+
+{
+    "lib_nombre": "Cien Años de soledad 5",
+    "lib_autor": "Gabriel Marquez 5",
+    "lib_editorial": "La oveja negra 5"
+}
+###
+
+POST http://127.0.0.1:9000/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "usu_email": "ejemplo@gmail.com",
+    "usu_clave": "123",
+    "usu_nombres": "Juan",
+    "usu_apellidos": "Romero"
+}
+
+###
+DELETE http://127.0.0.1:9000/api/libros/lib_id/3 HTTP/1.1
+
+
+###
+PUT http://127.0.0.1:9000/api/libros/lib_id/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "lib_nombre": "Viaje al centro de la tierra",
+    "lib_autor": "Julio Verne",
+    "lib_editorial": "La vieja escuela"
+}
+
+###
+PUT http://127.0.0.1:9000/api/usuarios/usu_id/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "usu_email": "ejemplo22@gmail.com2",
+    "usu_clave": "123abc",
+    "usu_nombres": "Juan2",
+    "usu_apellidos": "Romero2"
+}
