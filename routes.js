@@ -70,7 +70,7 @@ routes.get('/:table/consulta', (req, res)=>{
         query += 'dep_id, dep_nombre, eve_fecha, eve_hora, eve_marcador_equipo1, eve_marcador_equipo2, eve_estado '
         query += 'FROM deportes JOIN eventos ON dep_id = eve_tipo_deporte '
         query += 'JOIN equipos eq1 ON eve_equipo1 = eq1.equ_id '
-        query += 'JOIN equipos eq2 ON eve_equipo2 = eq2.equ_id ORDER BY DAY(eve_fecha) DESC'
+        query += 'JOIN equipos eq2 ON eve_equipo2 = eq2.equ_id ORDER BY YEAR(eve_fecha) DESC'
 
         conn.query(query, (err, rows) =>{
             if(err) return res.send(err)
