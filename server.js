@@ -26,6 +26,10 @@ app.use(express.json())
 
 app.use('/api', routes)
 
+app.get('/', (req, res)=>{
+    res.send("Bienvenido a la API de marcadores deportivos")
+})
+
 app.listen(app.get('port'),()=>{
     console.log(`Server running on port http://127.0.0.1:${app.get('port')}`)
 })
