@@ -67,7 +67,7 @@ routes.get('/:table/consulta', (req, res)=>{
     req.getConnection((err, conn) =>{
         if(err) return res.send(err)
         let query = 'SELECT eve_id, eq1.equ_id as id_equipo1, eq1.equ_nombre as equipo1 , eq1.equ_imagen as equipo1_img, eq2.equ_id as id_equipo2, eq2.equ_nombre as equipo2, eq2.equ_imagen as equipo2_img,'
-        query += 'dep_nombre, eve_fecha, eve_hora, eve_marcador_equipo1, eve_marcador_equipo2, eve_estado '
+        query += 'dep_id, dep_nombre, eve_fecha, eve_hora, eve_marcador_equipo1, eve_marcador_equipo2, eve_estado '
         query += 'FROM deportes JOIN eventos ON dep_id = eve_tipo_deporte '
         query += 'JOIN equipos eq1 ON eve_equipo1 = eq1.equ_id '
         query += 'JOIN equipos eq2 ON eve_equipo2 = eq2.equ_id ORDER BY DAY(eve_fecha) DESC'
