@@ -12,10 +12,10 @@ app.use(cors())
 app.set('port', process.env.PORT_SERVER || 9000)
 
 const dbOptions={
-    host:process.env.DB_HOST || 'localhost',
+    host:process.env.DB_HOST || '129.80.144.163',
     port:process.env.DB_PORT || '3306',
     user:process.env.DB_USER || 'root',
-    password:process.env.DB_PASSWORD || '12345678',
+    password:process.env.DB_PASSWORD || '*Juan2004',
     database:process.env.DB_NAME || 'deportes'
 }
 
