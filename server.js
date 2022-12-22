@@ -9,7 +9,7 @@ const app = express()
 
 app.use(cors())
 
-app.set('port', process.env.PORT_SERVER || 9000)
+app.set('port', process.env.PORT || 9000)
 
 const dbOptions={
     host:process.env.DB_HOST || '129.80.144.163',
